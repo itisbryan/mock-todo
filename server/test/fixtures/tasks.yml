@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: tasks
+#
+#  id         :integer          not null, primary key
+#  content    :text             not null
+#  expired_at :datetime
+#  is_public  :boolean          default(TRUE), not null
+#  status     :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  todo_id    :integer          not null
+#  user_id    :integer          not null
+#
+# Foreign Keys
+#
+#  todo_id  (todo_id => todos.id)
+#  user_id  (user_id => users.id)
+#
+
+one:
+  content: MyText
+  expired_at: 2021-06-16 20:47:48
+  todo_id: 
+  user_id: 
+  status: MyString
+  is_public: false
+
+two:
+  content: MyText
+  expired_at: 2021-06-16 20:47:48
+  todo_id: 
+  user_id: 
+  status: MyString
+  is_public: false
