@@ -1,0 +1,164 @@
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text NOT NULL, "expired_at" datetime, "todo_id" integer NOT NULL, "user_id" integer NOT NULL, "status" varchar NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "todos"[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "todos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar NOT NULL, "short_description" varchar, "user_id" integer NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "first_name" varchar NOT NULL, "last_name" varchar, "username" varchar NOT NULL, "email" varchar NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "content" text NOT NULL, "expired_at" datetime DEFAULT NULL, "todo_id" integer NOT NULL, "user_id" integer NOT NULL, "status" varchar NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","content","expired_at","todo_id","user_id","status","is_public","created_at","updated_at")
+                     SELECT "id","content","expired_at","todo_id","user_id","status","is_public","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "content" text NOT NULL, "expired_at" datetime DEFAULT NULL, "todo_id" integer NOT NULL, "user_id" integer NOT NULL, "status" varchar NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_bd5482c43a"
+FOREIGN KEY ("todo_id")
+  REFERENCES "todos" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","content","expired_at","todo_id","user_id","status","is_public","created_at","updated_at")
+                     SELECT "id","content","expired_at","todo_id","user_id","status","is_public","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "content" text NOT NULL, "expired_at" datetime DEFAULT NULL, "todo_id" integer NOT NULL, "user_id" integer NOT NULL, "status" varchar NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","content","expired_at","todo_id","user_id","status","is_public","created_at","updated_at")
+                     SELECT "id","content","expired_at","todo_id","user_id","status","is_public","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "content" text NOT NULL, "expired_at" datetime DEFAULT NULL, "todo_id" integer NOT NULL, "user_id" integer NOT NULL, "status" varchar NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_bd5482c43a"
+FOREIGN KEY ("todo_id")
+  REFERENCES "todos" ("id")
+, CONSTRAINT "fk_rails_4d2a9e4d7e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","content","expired_at","todo_id","user_id","status","is_public","created_at","updated_at")
+                     SELECT "id","content","expired_at","todo_id","user_id","status","is_public","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atodos" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "short_description" varchar DEFAULT NULL, "user_id" integer NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atodos" ("id","title","short_description","user_id","is_public","created_at","updated_at")
+                     SELECT "id","title","short_description","user_id","is_public","created_at","updated_at" FROM "todos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "todos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "todos" ("id" integer NOT NULL PRIMARY KEY, "title" varchar NOT NULL, "short_description" varchar DEFAULT NULL, "user_id" integer NOT NULL, "is_public" boolean DEFAULT 1 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d94154aa95"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("id","title","short_description","user_id","is_public","created_at","updated_at")
+                     SELECT "id","title","short_description","user_id","is_public","created_at","updated_at" FROM "atodos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atodos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210616134748)[0m
+  [1m[35m (9.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210615163730),
+(20210616134458);
+
+[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2021-06-17 08:05:31.492441"], ["updated_at", "2021-06-17 08:05:31.492441"]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "fd2e78c890b4387384b171a7c3e445a12e982677"], ["created_at", "2021-06-17 08:05:31.506103"], ["updated_at", "2021-06-17 08:05:31.506103"]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (12.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (12.4ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (9.1ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m

@@ -10,8 +10,10 @@ class ApplicationController < ActionController::API
 	protected
 
 	def configure_permitted_params
-		added_attrs = %i[first_name username]
+		added_attrs = %i[first_name username password_confirmation session]
 		devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
 		devise_parameter_sanitizer.permit :account_update, keys: added_attrs
 	end
+
+	
 end
