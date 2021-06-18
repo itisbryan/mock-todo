@@ -50,3 +50,5 @@ gem "devise_token_auth", "~> 1.1"
 gem "hirb", "~> 0.7.3"
 gem "rack-cors", "~> 1.1"
 gem "annotate", "~> 3.1"
+
+gem "kaminari", "~> 1.2"

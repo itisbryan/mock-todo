@@ -18,18 +18,19 @@
 #  user_id  (user_id => users.id)
 #
 class Task < ApplicationRecord
-  enum STATUS = [
-    TODO = 'todo'.freeze,
+  STATUS = [
+    TODO =  'todo'.freeze,
     IN_PROCESSING = 'in processing'.freeze,
-    FINISHED = 'finished'.freeze
+    FINISHED = 'finished'.freeze,
   ].freeze
+
 
   validates :content, presence: true
   validate :expiration_date_cannot_be_in_the_past
   validates :status, inclusion: { in: STATUS }
 
-  belongs_to :users
-  belongs_to :todos
+  belongs_to :user
+  belongs_to :todo
 
   private
   
