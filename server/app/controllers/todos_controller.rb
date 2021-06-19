@@ -4,10 +4,16 @@ class TodosController < ApplicationController
 
   # after_action :set_pagination_header(:todos), only: %i[index]
 
+  #include Hyperender::Action
+
+  include Paginable
+
   # GET /todos
   def index
-    @todos = Todo.where(user: current_user).page params[:page]
-    render json: { todos: @todos }, status: :ok
+    @todos = current_user.todos.page(current_page).per(per_page)
+    options = get_links_serializer_options('todos_path', @todos)
+    # options[:include] = [:user]
+    render json: TodoSerializer.new(@todos, options).serializable_hash.to_json
   end
 
   # POST /todos
@@ -15,7 +21,7 @@ class TodosController < ApplicationController
     @todo = Todo.new(todo_params)
     @todo.user = current_user
     if @todo.save
-      render json: { todo: @todo }, status: :created
+      render json: TodoSerializer.new(@todo).serializable_hash.to_json, status: :created
       return
     end
     render json: { errors: @todo.errors }, status: :unprocessable_entity
@@ -24,16 +30,16 @@ class TodosController < ApplicationController
   # GET /todos/:id
   def show
     if @todo.user != current_user
-      render json: { success: false, errors: ['You don\'t have this todo'] }, status: :not_found
+      not_found_todo
       return
     end
-    render json: { todo: @todo }, status: :ok
+    render json: TodoSerializer.new(@todo, included_chain).serializable_hash.to_json, status: :ok
   end
 
   # PUT /todos/:id
   def update
     if @todo.user != current_user
-      render json: { success: false, errors: ['You don\'t have this todo'] }, status: :not_found
+      not_found_todo
       return
     end
     if @todo.update(todo_params)
@@ -45,18 +51,26 @@ class TodosController < ApplicationController
 
   # DELETE /todos/:id
   def destroy
-     if @todo.user != current_user
-        render json: { success: false, errors: ['You don\'t have this todo'] }, status: :not_found
-        return
-      end
-      if @todo.destroy
-        head :no_content
-        return
-      end
-      render json: @todo.errors, status: :unprocessable_entity
+    if @todo.user != current_user
+      not_found_todo
+      return
+    end
+    if @todo.destroy
+      head :no_content
+      return
+    end
+    render json: @todo.errors, status: :unprocessable_entity
   end
 
   private
+
+  def included_chain
+    Hash.new(include: [:tasks])
+  end
+
+  def not_found_todo
+    render json: { success: false, errors: ['You don\'t have this todo'] }, status: :not_found
+  end
 
   def todo_params
     # # whitelist params

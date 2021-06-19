@@ -3,19 +3,22 @@ class TasksController < ApplicationController
   before_action :set_todo
   before_action :set_todo_task, only: %i[show update destroy]
 
+  include Paginable
+
   # GET /todos/:todo_id/tasks
   def index
-    @task = Task.where(user: current_user, todo: @todo).page params[:page]
-    json_response(@todo.tasks)
+    @tasks = Task.where(user: current_user, todo: @todo).page(current_page).per(per_page)
+    options = get_links_serializer_options('todo_tasks_path', @tasks)
+    render json: TaskSerializer.new(@tasks, options).serializable_hash.to_json
   end
 
   # GET /todos/:todo_id/tasks/:id
   def show
     if @task.user != current_user
-      render json: { success: false, errors: ['You don\'t have this task']}
+      task_not_found
       return
     end
-    render json: { task: @task }, status: :ok
+    render json: TaskSerializer.new(@task).serializable_hash.to_json, status: :ok
   end
 
   # POST /todos/:todo_id/tasks
@@ -24,7 +27,7 @@ class TasksController < ApplicationController
     @task.user = current_user
     @task.todo = @todo
     if @task.save
-      render json: { task: @task }, status: :created
+      render json: TaskSerializer.new(@task) .serializable_hash.to_json, status: :created
       return
     end
     render json: { error: @task.errors }, status: :unprocessable_entity
@@ -33,7 +36,7 @@ class TasksController < ApplicationController
   # PUT /todos/:todo_id/tasks/:id
   def update
     if @task.user != current_user
-      render json: { success: false, errors: ['You don\'t have this task'] }, status: :not_found
+      task_not_found 
       return
     end
     if @task.update(task_params)
@@ -46,7 +49,7 @@ class TasksController < ApplicationController
   # DELETE /todos/:todo_id/tasks/:id
   def destroy
     if @task.user != current_user
-      render json: { success: false, errors: ['You don\'t have this task'] }, status: :not_found
+      task_not_found 
       return
     end
     if @task.destroy
@@ -57,6 +60,10 @@ class TasksController < ApplicationController
   end
 
   private
+
+  def task_not_found
+    render json: { success: false, errors: ['You don\'t have this task'] }, status: :not_found
+  end
 
   def task_params
     params.require(:task).permit(:content, :status, :expired_at)
