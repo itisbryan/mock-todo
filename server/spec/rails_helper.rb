@@ -50,7 +50,7 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
-  # config.use_active_record = false
+  config.use_active_record = true
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
@@ -69,6 +69,15 @@ RSpec.configure do |config|
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
+
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+
+  config.include Warden::Test::Helpers
+
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
    # add `FactoryBot` methods

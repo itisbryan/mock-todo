@@ -1,23 +1,23 @@
 class ApplicationController < ActionController::API
 
- 	include Response
+  include Response
   include ExceptionHandler
 
-	include DeviseTokenAuth::Concerns::SetUserByToken
+  include DeviseTokenAuth::Concerns::SetUserByToken
 
-	before_action :configure_permitted_params, if: :devise_controller?
+  before_action :configure_permitted_params, if: :devise_controller?
 
-	protected
+  protected
 
-	def configure_permitted_params
-		added_attrs = %i[first_name username password_confirmation session]
-		devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
-		devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+  def configure_permitted_params
+    added_attrs = %i[first_name username password_confirmation session]
+    devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
+    devise_parameter_sanitizer.permit :account_update, keys: added_attrs
     devise_parameter_sanitizer.permit :new_user_session, keys: added_attrs
-	end
+  end
 
   # Config pagination header manually
-  def set_pagination_header(name, options = {} )
+  def set_pagination_header(name, options = {})
     scope = instance_variable_get("@#{name}")
     request_params = request.query_parameters
     url_without_params = request.original_url.slice(0..(request.original_url.index("?")-1)) unless request_params.empty?
@@ -37,5 +37,5 @@ class ApplicationController < ActionController::API
     headers['Link'] = pagination_links.join(', ')
   end
 
-	
+
 end

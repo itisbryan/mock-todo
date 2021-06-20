@@ -162,3 +162,921 @@ FOREIGN KEY ("user_id")
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (16.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (14.8ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.9ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (14.2ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (10.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (12.5ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (8.9ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (10.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (10.7ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (9.0ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.9ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (15.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (12.9ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.5ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (14.1ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (16.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (9.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (19.0ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (13.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (18.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (9.1ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (13.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (9.0ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (12.8ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (10.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (8.9ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (14.8ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-001@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-001@gmail.com"], ["encrypted_password", "$2a$12$LDaomArUGcn9IqXpvNeQqujdFwZYYg.pyhH4VAhUwbS6wf0VQNxta"], ["first_name", "nulla"], ["last_name", "deserunt"], ["username", "voluptatem"], ["email", "test-001@gmail.com"], ["created_at", "2021-06-19 12:32:44.322520"], ["updated_at", "2021-06-19 12:32:44.322520"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "numquam"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "numquam"], ["short_description", "voluptatem"], ["user_id", 1], ["created_at", "2021-06-19 12:32:44.327601"], ["updated_at", "2021-06-19 12:32:44.327601"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-002@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-002@gmail.com"], ["encrypted_password", "$2a$12$mNJKSybAU8pZSqoB6L36/u6YzcUMzJIAo92EDE4dcsaIZpQdj2uqS"], ["first_name", "blanditiis"], ["last_name", "sapiente"], ["username", "ea"], ["email", "test-002@gmail.com"], ["created_at", "2021-06-19 12:32:44.539056"], ["updated_at", "2021-06-19 12:32:44.539056"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "repellendus"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "repellendus"], ["short_description", "dolorum"], ["user_id", 2], ["created_at", "2021-06-19 12:32:44.541320"], ["updated_at", "2021-06-19 12:32:44.541320"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-003@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-003@gmail.com"], ["encrypted_password", "$2a$12$gQHWglU1YrNJ96OrBRjeG.D9.rowxfFUGSzgWdeKwNJDQOyBsflWy"], ["first_name", "sit"], ["last_name", "est"], ["username", "cupiditate"], ["email", "test-003@gmail.com"], ["created_at", "2021-06-19 12:32:44.733406"], ["updated_at", "2021-06-19 12:32:44.733406"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "recusandae"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "recusandae"], ["short_description", "autem"], ["user_id", 3], ["created_at", "2021-06-19 12:32:44.735213"], ["updated_at", "2021-06-19 12:32:44.735213"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-004@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-004@gmail.com"], ["encrypted_password", "$2a$12$QQi.aEAJn7HTJrilVMDZm.mNt/Psc7AFdhZVe9wMPAGr/G8akcCY."], ["first_name", "sint"], ["last_name", "labore"], ["username", "voluptates"], ["email", "test-004@gmail.com"], ["created_at", "2021-06-19 12:32:44.928025"], ["updated_at", "2021-06-19 12:32:44.928025"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "accusantium"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "accusantium"], ["short_description", "et"], ["user_id", 4], ["created_at", "2021-06-19 12:32:44.930773"], ["updated_at", "2021-06-19 12:32:44.930773"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-005@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-005@gmail.com"], ["encrypted_password", "$2a$12$kbpYrWCgeKyqsQ0yZn1U3ulZLXAvWqAeLBHbR7N6XmlQGXQZMB7a6"], ["first_name", "ipsa"], ["last_name", "quis"], ["username", "quia"], ["email", "test-005@gmail.com"], ["created_at", "2021-06-19 12:32:45.135983"], ["updated_at", "2021-06-19 12:32:45.135983"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "ut"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ut"], ["short_description", "asperiores"], ["user_id", 5], ["created_at", "2021-06-19 12:32:45.138506"], ["updated_at", "2021-06-19 12:32:45.138506"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-006@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-006@gmail.com"], ["encrypted_password", "$2a$12$tU.4GNy4iNtxNuXkU6t0DOdiHryRF41Qpfyo.wSdeQ1u5X5viakmm"], ["first_name", "quae"], ["last_name", "vero"], ["username", "nulla"], ["email", "test-006@gmail.com"], ["created_at", "2021-06-19 12:32:45.341005"], ["updated_at", "2021-06-19 12:32:45.341005"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "occaecati"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "occaecati"], ["short_description", "placeat"], ["user_id", 6], ["created_at", "2021-06-19 12:32:45.342685"], ["updated_at", "2021-06-19 12:32:45.342685"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-007@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-007@gmail.com"], ["encrypted_password", "$2a$12$x1yScBzsf6o1AFJ1oJX9Feo6z7mOqPEZ5brIdng83dCb0UypXsPMW"], ["first_name", "illo"], ["last_name", "quo"], ["username", "officia"], ["email", "test-007@gmail.com"], ["created_at", "2021-06-19 12:32:45.545309"], ["updated_at", "2021-06-19 12:32:45.545309"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "et"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "et"], ["short_description", "provident"], ["user_id", 7], ["created_at", "2021-06-19 12:32:45.547462"], ["updated_at", "2021-06-19 12:32:45.547462"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-008@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-008@gmail.com"], ["encrypted_password", "$2a$12$skBNr1fszCKbGX0d7xibk.D6NgM5GMQzaxGhWbQczayt3Q4oH5OWm"], ["first_name", "nihil"], ["last_name", "asperiores"], ["username", "deleniti"], ["email", "test-008@gmail.com"], ["created_at", "2021-06-19 12:32:45.790257"], ["updated_at", "2021-06-19 12:32:45.790257"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "repudiandae"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "repudiandae"], ["short_description", "a"], ["user_id", 8], ["created_at", "2021-06-19 12:32:45.792488"], ["updated_at", "2021-06-19 12:32:45.792488"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-009@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-009@gmail.com"], ["encrypted_password", "$2a$12$vAFXEhK9961hZMxS/2OwGeCnbfWisplEhhCty8VPM4t9RHK5RRl/G"], ["first_name", "minus"], ["last_name", "nulla"], ["username", "quia"], ["email", "test-009@gmail.com"], ["created_at", "2021-06-19 12:32:45.984664"], ["updated_at", "2021-06-19 12:32:45.984664"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "quae"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "quae"], ["short_description", "neque"], ["user_id", 9], ["created_at", "2021-06-19 12:32:45.986600"], ["updated_at", "2021-06-19 12:32:45.986600"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-010@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-010@gmail.com"], ["encrypted_password", "$2a$12$DnaQ6VmMBIn9Rg/5/w1LseKX2Im3S0QYJmPm5LbzQ2e6KPLwQxMhO"], ["first_name", "at"], ["last_name", "delectus"], ["username", "necessitatibus"], ["email", "test-010@gmail.com"], ["created_at", "2021-06-19 12:32:46.181351"], ["updated_at", "2021-06-19 12:32:46.181351"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "enim"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "enim"], ["short_description", "corporis"], ["user_id", 10], ["created_at", "2021-06-19 12:32:46.183262"], ["updated_at", "2021-06-19 12:32:46.183262"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-011@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-011@gmail.com"], ["encrypted_password", "$2a$12$JjKOyB40ketpzCqLFJp2wO8y7H8.yVJ53aZ1B3Xqpsm7TWsIA41xy"], ["first_name", "voluptas"], ["last_name", "in"], ["username", "voluptates"], ["email", "test-011@gmail.com"], ["created_at", "2021-06-19 12:32:46.386736"], ["updated_at", "2021-06-19 12:32:46.386736"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-012@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-012@gmail.com"], ["encrypted_password", "$2a$12$qtQmMtDmh4EAaUJAOJ9VIuN.Ez23fByNElKkmk6eLNQAa/KxjnJHq"], ["first_name", "odio"], ["last_name", "velit"], ["username", "at"], ["email", "test-012@gmail.com"], ["created_at", "2021-06-19 12:32:46.606376"], ["updated_at", "2021-06-19 12:32:46.606376"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "est"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "est"], ["short_description", "veritatis"], ["user_id", 1], ["created_at", "2021-06-19 12:32:46.608663"], ["updated_at", "2021-06-19 12:32:46.608663"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-013@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-013@gmail.com"], ["encrypted_password", "$2a$12$k92DRWSbkjzfvK87UNy0meMZ8ApgHuo.RxWFEdUJVbJJPWit4aw3W"], ["first_name", "inventore"], ["last_name", "porro"], ["username", "illum"], ["email", "test-013@gmail.com"], ["created_at", "2021-06-19 12:32:46.804772"], ["updated_at", "2021-06-19 12:32:46.804772"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "fuga"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fuga"], ["short_description", "eveniet"], ["user_id", 2], ["created_at", "2021-06-19 12:32:46.807892"], ["updated_at", "2021-06-19 12:32:46.807892"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-014@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-014@gmail.com"], ["encrypted_password", "$2a$12$rGDodh4.UGv7SfAqvgxdguUeKHuyIi5lLoG5EUZ1Y8GO53I4mJA2K"], ["first_name", "officia"], ["last_name", "numquam"], ["username", "et"], ["email", "test-014@gmail.com"], ["created_at", "2021-06-19 12:32:47.012537"], ["updated_at", "2021-06-19 12:32:47.012537"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "et"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "et"], ["short_description", "nostrum"], ["user_id", 3], ["created_at", "2021-06-19 12:32:47.014250"], ["updated_at", "2021-06-19 12:32:47.014250"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-015@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-015@gmail.com"], ["encrypted_password", "$2a$12$VlYsHN3VduhN7Vj1ds/E8O7BfQiSqg/e4JjS7NM4wZ4HC3gpBI00C"], ["first_name", "neque"], ["last_name", "aut"], ["username", "nobis"], ["email", "test-015@gmail.com"], ["created_at", "2021-06-19 12:32:47.222480"], ["updated_at", "2021-06-19 12:32:47.222480"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "esse"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "esse"], ["short_description", "ut"], ["user_id", 4], ["created_at", "2021-06-19 12:32:47.224351"], ["updated_at", "2021-06-19 12:32:47.224351"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-016@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-016@gmail.com"], ["encrypted_password", "$2a$12$oBHE/E1lOKZBHNYvhjuFOe0Qv3Y77Dxt2fTujJtOFMo8i7u6AOEqy"], ["first_name", "praesentium"], ["last_name", "magnam"], ["username", "error"], ["email", "test-016@gmail.com"], ["created_at", "2021-06-19 12:32:47.425096"], ["updated_at", "2021-06-19 12:32:47.425096"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "voluptatibus"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "voluptatibus"], ["short_description", "at"], ["user_id", 5], ["created_at", "2021-06-19 12:32:47.427038"], ["updated_at", "2021-06-19 12:32:47.427038"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-017@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-017@gmail.com"], ["encrypted_password", "$2a$12$KddfHGGIk.K2ToJmbCU7ZeTcFLUN3BQyp/sp0MSbK/MQbATc1IDjG"], ["first_name", "omnis"], ["last_name", "tempore"], ["username", "perferendis"], ["email", "test-017@gmail.com"], ["created_at", "2021-06-19 12:32:47.614577"], ["updated_at", "2021-06-19 12:32:47.614577"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "voluptate"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "voluptate"], ["short_description", "excepturi"], ["user_id", 6], ["created_at", "2021-06-19 12:32:47.616126"], ["updated_at", "2021-06-19 12:32:47.616126"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-018@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-018@gmail.com"], ["encrypted_password", "$2a$12$RISSGPA2O2n9uHZpfBR/AOd7YB48sjQiP1RBPparG2H5A5XgDtE8."], ["first_name", "nobis"], ["last_name", "provident"], ["username", "quo"], ["email", "test-018@gmail.com"], ["created_at", "2021-06-19 12:32:47.804408"], ["updated_at", "2021-06-19 12:32:47.804408"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "tenetur"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "tenetur"], ["short_description", "natus"], ["user_id", 7], ["created_at", "2021-06-19 12:32:47.806066"], ["updated_at", "2021-06-19 12:32:47.806066"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-019@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-019@gmail.com"], ["encrypted_password", "$2a$12$Q/l2HZ6uKMVEt1QQLV4fnO8wlkKI.IZ2W5wlKE5Aqczp7sJqc.aoe"], ["first_name", "officiis"], ["last_name", "illo"], ["username", "qui"], ["email", "test-019@gmail.com"], ["created_at", "2021-06-19 12:32:47.996267"], ["updated_at", "2021-06-19 12:32:47.996267"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "earum"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "earum"], ["short_description", "quidem"], ["user_id", 8], ["created_at", "2021-06-19 12:32:47.997981"], ["updated_at", "2021-06-19 12:32:47.997981"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-020@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-020@gmail.com"], ["encrypted_password", "$2a$12$gg6Z3EW4u2Niwgi9SuqUP.r5T1JX87Ej1eVkw2qwRduJFbHfAqVWO"], ["first_name", "sit"], ["last_name", "exercitationem"], ["username", "consequatur"], ["email", "test-020@gmail.com"], ["created_at", "2021-06-19 12:32:48.186738"], ["updated_at", "2021-06-19 12:32:48.186738"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "hic"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "hic"], ["short_description", "illo"], ["user_id", 9], ["created_at", "2021-06-19 12:32:48.188289"], ["updated_at", "2021-06-19 12:32:48.188289"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-021@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-021@gmail.com"], ["encrypted_password", "$2a$12$bZXxTHkkfpah5csASPr9/ed9Kqz7S5.OF4fIALxjkHDyCI3TXrV8K"], ["first_name", "sint"], ["last_name", "est"], ["username", "delectus"], ["email", "test-021@gmail.com"], ["created_at", "2021-06-19 12:32:48.373995"], ["updated_at", "2021-06-19 12:32:48.373995"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "officia"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "officia"], ["short_description", "omnis"], ["user_id", 10], ["created_at", "2021-06-19 12:32:48.375632"], ["updated_at", "2021-06-19 12:32:48.375632"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-022@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-022@gmail.com"], ["encrypted_password", "$2a$12$L53dnz22fAtZZcFgc/YGI.6v4lB9giQRI3zDXmIsGw.3eY/tZAirS"], ["first_name", "repellat"], ["last_name", "vel"], ["username", "laborum"], ["email", "test-022@gmail.com"], ["created_at", "2021-06-19 12:32:48.566884"], ["updated_at", "2021-06-19 12:32:48.566884"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (12.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (9.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (9.3ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-001@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-001@gmail.com"], ["encrypted_password", "$2a$12$m6g7zPYojCoFEVmlVPXc.upd4w7kSXJhcrWlXCL5F4ENrAZStig02"], ["first_name", "voluptas"], ["last_name", "numquam"], ["username", "aut"], ["email", "test-001@gmail.com"], ["created_at", "2021-06-19 12:34:10.230689"], ["updated_at", "2021-06-19 12:34:10.230689"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "placeat"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "placeat"], ["short_description", "est"], ["user_id", 1], ["created_at", "2021-06-19 12:34:10.234106"], ["updated_at", "2021-06-19 12:34:10.234106"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-002@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-002@gmail.com"], ["encrypted_password", "$2a$12$iHMcmcAnZnU494sVZvp2De6Y4183W2gZgSSusEqxre.HFV46usB0S"], ["first_name", "culpa"], ["last_name", "reiciendis"], ["username", "consectetur"], ["email", "test-002@gmail.com"], ["created_at", "2021-06-19 12:34:10.440132"], ["updated_at", "2021-06-19 12:34:10.440132"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "optio"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "optio"], ["short_description", "recusandae"], ["user_id", 2], ["created_at", "2021-06-19 12:34:10.441947"], ["updated_at", "2021-06-19 12:34:10.441947"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-003@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-003@gmail.com"], ["encrypted_password", "$2a$12$hVt7UqynZDxMja4WujXx8OYcszKblcCNQ8e1JYHyzvI2uP610nLrW"], ["first_name", "placeat"], ["last_name", "aut"], ["username", "accusamus"], ["email", "test-003@gmail.com"], ["created_at", "2021-06-19 12:34:10.640079"], ["updated_at", "2021-06-19 12:34:10.640079"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "et"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "et"], ["short_description", "doloribus"], ["user_id", 3], ["created_at", "2021-06-19 12:34:10.641840"], ["updated_at", "2021-06-19 12:34:10.641840"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-004@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-004@gmail.com"], ["encrypted_password", "$2a$12$wN/gFOCkOakcnzl63mNDgOK61szGxuV6aIRIe4lWoEGGfBudSG6UK"], ["first_name", "non"], ["last_name", "totam"], ["username", "ut"], ["email", "test-004@gmail.com"], ["created_at", "2021-06-19 12:34:10.830276"], ["updated_at", "2021-06-19 12:34:10.830276"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "ut"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ut"], ["short_description", "enim"], ["user_id", 4], ["created_at", "2021-06-19 12:34:10.831975"], ["updated_at", "2021-06-19 12:34:10.831975"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-005@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-005@gmail.com"], ["encrypted_password", "$2a$12$P1dHfG.jdGmiGYQVATbCDeJVZxty95k6ottx0yLi9RtboTagT1b5u"], ["first_name", "quidem"], ["last_name", "iste"], ["username", "nostrum"], ["email", "test-005@gmail.com"], ["created_at", "2021-06-19 12:34:11.018555"], ["updated_at", "2021-06-19 12:34:11.018555"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "adipisci"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "adipisci"], ["short_description", "aspernatur"], ["user_id", 5], ["created_at", "2021-06-19 12:34:11.020089"], ["updated_at", "2021-06-19 12:34:11.020089"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-006@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-006@gmail.com"], ["encrypted_password", "$2a$12$9cA8otNQQBN2lnAwn8F3heEDGZh2lAL2gYuS4q8Yy1Bjs/s1R0kRa"], ["first_name", "et"], ["last_name", "sint"], ["username", "omnis"], ["email", "test-006@gmail.com"], ["created_at", "2021-06-19 12:34:11.208352"], ["updated_at", "2021-06-19 12:34:11.208352"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "voluptatibus"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "voluptatibus"], ["short_description", "ut"], ["user_id", 6], ["created_at", "2021-06-19 12:34:11.209953"], ["updated_at", "2021-06-19 12:34:11.209953"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-007@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-007@gmail.com"], ["encrypted_password", "$2a$12$NNiVyJdZ4NJdAR7hRyCLgupyXR/rBbIpH3sDkWAdydyoHXTtAnTRO"], ["first_name", "amet"], ["last_name", "sunt"], ["username", "nesciunt"], ["email", "test-007@gmail.com"], ["created_at", "2021-06-19 12:34:11.397590"], ["updated_at", "2021-06-19 12:34:11.397590"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "qui"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "qui"], ["short_description", "laboriosam"], ["user_id", 7], ["created_at", "2021-06-19 12:34:11.399238"], ["updated_at", "2021-06-19 12:34:11.399238"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-008@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-008@gmail.com"], ["encrypted_password", "$2a$12$hIoIsmqogIvecKhwV4oa0OHKJuhphLfixbyJJTncYcQP1hJBL0Aru"], ["first_name", "sed"], ["last_name", "quaerat"], ["username", "cupiditate"], ["email", "test-008@gmail.com"], ["created_at", "2021-06-19 12:34:11.586203"], ["updated_at", "2021-06-19 12:34:11.586203"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "qui"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-009@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-009@gmail.com"], ["encrypted_password", "$2a$12$clCkl5UFi48MTXjVDgseJ.polE7SUUKi5Bd/ETFRtL9jd/cInSIRS"], ["first_name", "culpa"], ["last_name", "officia"], ["username", "velit"], ["email", "test-009@gmail.com"], ["created_at", "2021-06-19 12:34:11.809207"], ["updated_at", "2021-06-19 12:34:11.809207"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "at"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "at"], ["short_description", "maiores"], ["user_id", 1], ["created_at", "2021-06-19 12:34:11.810992"], ["updated_at", "2021-06-19 12:34:11.810992"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-010@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-010@gmail.com"], ["encrypted_password", "$2a$12$0bYZoDsTeqNW0NRD7M9q5uIyaT9h50QO4dwvVzpIM83ULC5e0MFhG"], ["first_name", "quia"], ["last_name", "aut"], ["username", "ex"], ["email", "test-010@gmail.com"], ["created_at", "2021-06-19 12:34:12.003310"], ["updated_at", "2021-06-19 12:34:12.003310"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "corrupti"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "corrupti"], ["short_description", "corrupti"], ["user_id", 2], ["created_at", "2021-06-19 12:34:12.004902"], ["updated_at", "2021-06-19 12:34:12.004902"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-011@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-011@gmail.com"], ["encrypted_password", "$2a$12$m0IBLW1ivh.es4a9Q5KB..l.rwe1pzU6/sT4hk2Koqb2fQ4DeH8We"], ["first_name", "fugit"], ["last_name", "autem"], ["username", "qui"], ["email", "test-011@gmail.com"], ["created_at", "2021-06-19 12:34:12.200337"], ["updated_at", "2021-06-19 12:34:12.200337"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "molestiae"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "molestiae"], ["short_description", "explicabo"], ["user_id", 3], ["created_at", "2021-06-19 12:34:12.203219"], ["updated_at", "2021-06-19 12:34:12.203219"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-012@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-012@gmail.com"], ["encrypted_password", "$2a$12$GuQdb3bqMF2Ut1KyyDVlP.u8nuYr4n5iM9aR0zM9uwTi2hytcLFzm"], ["first_name", "quo"], ["last_name", "ad"], ["username", "et"], ["email", "test-012@gmail.com"], ["created_at", "2021-06-19 12:34:12.411629"], ["updated_at", "2021-06-19 12:34:12.411629"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "nobis"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "nobis"], ["short_description", "voluptatum"], ["user_id", 4], ["created_at", "2021-06-19 12:34:12.413525"], ["updated_at", "2021-06-19 12:34:12.413525"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-013@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-013@gmail.com"], ["encrypted_password", "$2a$12$bxMK8B4DUL0OLxdMOu1bjOTz8HqxMbv5bwxgIyOP3U5Afq2APKTEu"], ["first_name", "aut"], ["last_name", "id"], ["username", "ex"], ["email", "test-013@gmail.com"], ["created_at", "2021-06-19 12:34:12.618294"], ["updated_at", "2021-06-19 12:34:12.618294"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "dolor"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "dolor"], ["short_description", "amet"], ["user_id", 5], ["created_at", "2021-06-19 12:34:12.619861"], ["updated_at", "2021-06-19 12:34:12.619861"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-014@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-014@gmail.com"], ["encrypted_password", "$2a$12$h2/O07/UpWJ6ntVazsJnbuSyRKceB1t9WnvOcPiIo5G1c.3UMNsvS"], ["first_name", "quia"], ["last_name", "architecto"], ["username", "qui"], ["email", "test-014@gmail.com"], ["created_at", "2021-06-19 12:34:12.808489"], ["updated_at", "2021-06-19 12:34:12.808489"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "temporibus"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "temporibus"], ["short_description", "animi"], ["user_id", 6], ["created_at", "2021-06-19 12:34:12.810164"], ["updated_at", "2021-06-19 12:34:12.810164"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-015@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-015@gmail.com"], ["encrypted_password", "$2a$12$.Kszefk7F5RhtPY94VsT.OOdcpwtdi/I8NRN3KmSN.9UIjTmWT6ay"], ["first_name", "ipsum"], ["last_name", "unde"], ["username", "qui"], ["email", "test-015@gmail.com"], ["created_at", "2021-06-19 12:34:12.997703"], ["updated_at", "2021-06-19 12:34:12.997703"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "atque"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "atque"], ["short_description", "rem"], ["user_id", 7], ["created_at", "2021-06-19 12:34:12.999329"], ["updated_at", "2021-06-19 12:34:12.999329"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-016@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-016@gmail.com"], ["encrypted_password", "$2a$12$BpThRuonE81/3W1DpstGle4ulElX6qj60ZP4vaoV5gl0Aq5.wHyZ."], ["first_name", "non"], ["last_name", "sunt"], ["username", "ipsam"], ["email", "test-016@gmail.com"], ["created_at", "2021-06-19 12:34:13.198462"], ["updated_at", "2021-06-19 12:34:13.198462"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "labore"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "labore"], ["short_description", "et"], ["user_id", 8], ["created_at", "2021-06-19 12:34:13.200230"], ["updated_at", "2021-06-19 12:34:13.200230"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-017@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-017@gmail.com"], ["encrypted_password", "$2a$12$ni5oj5H8ghEY8XBoqPfcvewDslDcDigtTNSpkFU7uD.oeXGx0g7dO"], ["first_name", "excepturi"], ["last_name", "voluptatem"], ["username", "sint"], ["email", "test-017@gmail.com"], ["created_at", "2021-06-19 12:34:13.392470"], ["updated_at", "2021-06-19 12:34:13.392470"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "ut"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ut"], ["short_description", "mollitia"], ["user_id", 9], ["created_at", "2021-06-19 12:34:13.394027"], ["updated_at", "2021-06-19 12:34:13.394027"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-018@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-018@gmail.com"], ["encrypted_password", "$2a$12$Hx4E7QO.xIh.1c15mUNniOn7N.WWgKqSZ3O3RMLaIO6ChCx2IdB32"], ["first_name", "id"], ["last_name", "asperiores"], ["username", "sint"], ["email", "test-018@gmail.com"], ["created_at", "2021-06-19 12:34:13.580738"], ["updated_at", "2021-06-19 12:34:13.580738"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "aspernatur"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "aspernatur"], ["short_description", "corporis"], ["user_id", 10], ["created_at", "2021-06-19 12:34:13.582367"], ["updated_at", "2021-06-19 12:34:13.582367"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-019@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-019@gmail.com"], ["encrypted_password", "$2a$12$piqTtd8kWrn4pBMNMeWilOCLJST4a.JSY2ILiyZWIQQ3fc7PBhmBS"], ["first_name", "sunt"], ["last_name", "aut"], ["username", "molestiae"], ["email", "test-019@gmail.com"], ["created_at", "2021-06-19 12:34:13.777624"], ["updated_at", "2021-06-19 12:34:13.777624"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (9.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (8.8ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (18.0ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-001@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-001@gmail.com"], ["encrypted_password", "$2a$12$3J7m9t9rVi5wV4mR.mFWgO/zJWYo274m/4vkZgkDneN0reRRNqWmG"], ["first_name", "quis"], ["last_name", "eos"], ["username", "hic"], ["email", "test-001@gmail.com"], ["created_at", "2021-06-19 12:34:41.826009"], ["updated_at", "2021-06-19 12:34:41.826009"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-002@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-002@gmail.com"], ["encrypted_password", "$2a$12$GLwbFVZMCEbr4GdruQPZZu42LOYxDC6Cae5/zduPtQzEucSTzM9km"], ["first_name", "praesentium"], ["last_name", "aspernatur"], ["username", "nobis"], ["email", "test-002@gmail.com"], ["created_at", "2021-06-19 12:34:42.057131"], ["updated_at", "2021-06-19 12:34:42.057131"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (9.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (9.5ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (13.9ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-001@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-001@gmail.com"], ["encrypted_password", "$2a$12$K8eor77IvHd/TSDRzQ6aJObKqs/KHHh6qDzbX6pRtU55IuHFJ7Pka"], ["first_name", "nobis"], ["last_name", "ducimus"], ["username", "animi"], ["email", "test-001@gmail.com"], ["created_at", "2021-06-19 12:35:32.073656"], ["updated_at", "2021-06-19 12:35:32.073656"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-002@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-002@gmail.com"], ["encrypted_password", "$2a$12$KdD.cpndn8QhQarRW/behudh8pmEip89hQx5oltUuQk.kGmpeKvG."], ["first_name", "rerum"], ["last_name", "recusandae"], ["username", "exercitationem"], ["email", "test-002@gmail.com"], ["created_at", "2021-06-19 12:35:32.310425"], ["updated_at", "2021-06-19 12:35:32.310425"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (10.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (13.6ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (13.8ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-001@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-001@gmail.com"], ["encrypted_password", "$2a$12$X3PUp2YrjvoxJGeE1a8aheRd.Mz7o.T8w/xi4QD/stSOWeneU4kDG"], ["first_name", "quidem"], ["last_name", "laudantium"], ["username", "et"], ["email", "test-001@gmail.com"], ["created_at", "2021-06-19 12:35:49.789131"], ["updated_at", "2021-06-19 12:35:49.789131"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-002@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-002@gmail.com"], ["encrypted_password", "$2a$12$qKt4aCx26F3fFahYtH1FvulNsC49Lx74Ml9UwklGwBGH5SCQB0/Ze"], ["first_name", "consequatur"], ["last_name", "dolor"], ["username", "consequatur"], ["email", "test-002@gmail.com"], ["created_at", "2021-06-19 12:35:50.008225"], ["updated_at", "2021-06-19 12:35:50.008225"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (9.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (9.0ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (23.3ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-001@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-001@gmail.com"], ["encrypted_password", "$2a$12$xUoKlsjTUMkeQ2AWJpzbE.qyumFKOIPsRI3y6LtnaVNasrmid.X/e"], ["first_name", "molestiae"], ["last_name", "adipisci"], ["username", "nihil"], ["email", "test-001@gmail.com"], ["created_at", "2021-06-19 12:36:00.276547"], ["updated_at", "2021-06-19 12:36:00.276547"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-002@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-002@gmail.com"], ["encrypted_password", "$2a$12$3wJBsT0repRgqDsTfz7okObyfHKfkOBIfESv8Cl3Wcbu77q1gZeyG"], ["first_name", "ullam"], ["last_name", "libero"], ["username", "quas"], ["email", "test-002@gmail.com"], ["created_at", "2021-06-19 12:36:00.519043"], ["updated_at", "2021-06-19 12:36:00.519043"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (10.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "tasks"[0m
+  [1m[35m (13.0ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'tasks';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "todos"[0m
+  [1m[35m (13.9ms)[0m  [1m[31mDELETE FROM "todos"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'todos';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-001@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-001@gmail.com"], ["encrypted_password", "$2a$12$QBrpIwYpRTYi44ARBtwUFeNd1oewQeMTOQMjr3gVrAkOgSNpgDc4i"], ["first_name", "laboriosam"], ["last_name", "voluptas"], ["username", "aut"], ["email", "test-001@gmail.com"], ["created_at", "2021-06-19 12:36:17.048133"], ["updated_at", "2021-06-19 12:36:17.048133"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "in"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "in"], ["short_description", "consequuntur"], ["user_id", 1], ["created_at", "2021-06-19 12:36:17.052326"], ["updated_at", "2021-06-19 12:36:17.052326"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-002@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-002@gmail.com"], ["encrypted_password", "$2a$12$NuAc3OOu9dZT.wOoTtwMquoBlUyylTeZm5Ib3P1907y5th.J4xNU."], ["first_name", "optio"], ["last_name", "ut"], ["username", "ipsum"], ["email", "test-002@gmail.com"], ["created_at", "2021-06-19 12:36:17.272523"], ["updated_at", "2021-06-19 12:36:17.272523"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "natus"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "natus"], ["short_description", "sunt"], ["user_id", 2], ["created_at", "2021-06-19 12:36:17.275721"], ["updated_at", "2021-06-19 12:36:17.275721"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-003@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-003@gmail.com"], ["encrypted_password", "$2a$12$JWUjm5izP19NxY4B1RDFb.wL68l9cyWUC0Pzg18BbPDsyeZs2pQau"], ["first_name", "sed"], ["last_name", "temporibus"], ["username", "quis"], ["email", "test-003@gmail.com"], ["created_at", "2021-06-19 12:36:17.468313"], ["updated_at", "2021-06-19 12:36:17.468313"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "accusamus"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "accusamus"], ["short_description", "aut"], ["user_id", 3], ["created_at", "2021-06-19 12:36:17.469812"], ["updated_at", "2021-06-19 12:36:17.469812"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-004@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-004@gmail.com"], ["encrypted_password", "$2a$12$XTzEN4q/A5xtFEzSVBkNhupKIqkF2.ci0EOAJ6qdPORqC9Fgk8iee"], ["first_name", "aut"], ["last_name", "dicta"], ["username", "iusto"], ["email", "test-004@gmail.com"], ["created_at", "2021-06-19 12:36:17.656812"], ["updated_at", "2021-06-19 12:36:17.656812"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "ad"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ad"], ["short_description", "sed"], ["user_id", 4], ["created_at", "2021-06-19 12:36:17.659385"], ["updated_at", "2021-06-19 12:36:17.659385"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-005@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-005@gmail.com"], ["encrypted_password", "$2a$12$sdHuC9acaIc0YVe9hzfg3.rjEvdWNQ6uVhhcV6avna3GXHFTBk37K"], ["first_name", "voluptas"], ["last_name", "modi"], ["username", "explicabo"], ["email", "test-005@gmail.com"], ["created_at", "2021-06-19 12:36:17.859198"], ["updated_at", "2021-06-19 12:36:17.859198"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "ea"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ea"], ["short_description", "veritatis"], ["user_id", 5], ["created_at", "2021-06-19 12:36:17.860867"], ["updated_at", "2021-06-19 12:36:17.860867"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-006@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-006@gmail.com"], ["encrypted_password", "$2a$12$BRVpmB9c9y1mXHd.i2fmpe5V88gMuWnPITygDlxIYS1bg1Cjnac2u"], ["first_name", "aut"], ["last_name", "maiores"], ["username", "reiciendis"], ["email", "test-006@gmail.com"], ["created_at", "2021-06-19 12:36:18.052089"], ["updated_at", "2021-06-19 12:36:18.052089"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "quis"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "quis"], ["short_description", "modi"], ["user_id", 6], ["created_at", "2021-06-19 12:36:18.054382"], ["updated_at", "2021-06-19 12:36:18.054382"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-007@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-007@gmail.com"], ["encrypted_password", "$2a$12$cD.v3/RqNE3Rs7iwj/NZN.usepPxFiQrLIEE2LN7jADInGVqdS6ri"], ["first_name", "debitis"], ["last_name", "illo"], ["username", "et"], ["email", "test-007@gmail.com"], ["created_at", "2021-06-19 12:36:18.241740"], ["updated_at", "2021-06-19 12:36:18.241740"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "vero"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "vero"], ["short_description", "tempora"], ["user_id", 7], ["created_at", "2021-06-19 12:36:18.243357"], ["updated_at", "2021-06-19 12:36:18.243357"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-008@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-008@gmail.com"], ["encrypted_password", "$2a$12$NOe3IwckuELIS69hqM1BlOD6f/deZVflmV1mv2GyNC7pGEbH/WdKC"], ["first_name", "dignissimos"], ["last_name", "porro"], ["username", "ad"], ["email", "test-008@gmail.com"], ["created_at", "2021-06-19 12:36:18.446941"], ["updated_at", "2021-06-19 12:36:18.446941"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "accusamus"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-009@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-009@gmail.com"], ["encrypted_password", "$2a$12$am.dds/BNsAxZrqLjipwXeEKwbqkEW1kNSq8f5V985izGWxKBlNOS"], ["first_name", "ab"], ["last_name", "nihil"], ["username", "pariatur"], ["email", "test-009@gmail.com"], ["created_at", "2021-06-19 12:36:18.667491"], ["updated_at", "2021-06-19 12:36:18.667491"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "libero"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "libero"], ["short_description", "cum"], ["user_id", 1], ["created_at", "2021-06-19 12:36:18.670096"], ["updated_at", "2021-06-19 12:36:18.670096"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-010@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-010@gmail.com"], ["encrypted_password", "$2a$12$/26FXJZcg.kAVorjgMt3oeXT9f.7nxc11Fkqf0zScSAmqCjWM.5x2"], ["first_name", "atque"], ["last_name", "consequatur"], ["username", "natus"], ["email", "test-010@gmail.com"], ["created_at", "2021-06-19 12:36:18.858011"], ["updated_at", "2021-06-19 12:36:18.858011"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "aut"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "aut"], ["short_description", "eum"], ["user_id", 2], ["created_at", "2021-06-19 12:36:18.859396"], ["updated_at", "2021-06-19 12:36:18.859396"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-011@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-011@gmail.com"], ["encrypted_password", "$2a$12$i7JaHcvw2GSk//fSshk8Ve83xwf7XnJbg5WlEnDF0A3sTLwlti2RW"], ["first_name", "assumenda"], ["last_name", "et"], ["username", "adipisci"], ["email", "test-011@gmail.com"], ["created_at", "2021-06-19 12:36:19.055046"], ["updated_at", "2021-06-19 12:36:19.055046"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "aperiam"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "aperiam"], ["short_description", "velit"], ["user_id", 3], ["created_at", "2021-06-19 12:36:19.057135"], ["updated_at", "2021-06-19 12:36:19.057135"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-012@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-012@gmail.com"], ["encrypted_password", "$2a$12$j2sc90EtaADerCaxmcyEqO3Ss7INEx6IbXwMmpDGFcy9tnsc44hy2"], ["first_name", "ullam"], ["last_name", "est"], ["username", "dolores"], ["email", "test-012@gmail.com"], ["created_at", "2021-06-19 12:36:19.268578"], ["updated_at", "2021-06-19 12:36:19.268578"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "maiores"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "maiores"], ["short_description", "qui"], ["user_id", 4], ["created_at", "2021-06-19 12:36:19.270471"], ["updated_at", "2021-06-19 12:36:19.270471"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-013@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-013@gmail.com"], ["encrypted_password", "$2a$12$Q6/D0exr/vTVwzLGbhfDR.A6S0q03Mfm8YrJPCg5.6IlYoUvQHnSe"], ["first_name", "rerum"], ["last_name", "architecto"], ["username", "saepe"], ["email", "test-013@gmail.com"], ["created_at", "2021-06-19 12:36:19.460972"], ["updated_at", "2021-06-19 12:36:19.460972"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "vel"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "vel"], ["short_description", "fugit"], ["user_id", 5], ["created_at", "2021-06-19 12:36:19.462477"], ["updated_at", "2021-06-19 12:36:19.462477"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-014@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-014@gmail.com"], ["encrypted_password", "$2a$12$jOg7p.QV2O/PQUFAQ0jgq..iGNLg7utFV9Jk0087YK1hGEZDjvkYq"], ["first_name", "repellat"], ["last_name", "in"], ["username", "nesciunt"], ["email", "test-014@gmail.com"], ["created_at", "2021-06-19 12:36:19.648300"], ["updated_at", "2021-06-19 12:36:19.648300"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "officia"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "officia"], ["short_description", "et"], ["user_id", 6], ["created_at", "2021-06-19 12:36:19.650103"], ["updated_at", "2021-06-19 12:36:19.650103"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-015@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-015@gmail.com"], ["encrypted_password", "$2a$12$waG44nWXA6lj8jRgYtGfdOkFr0y1vQ1mT87YR29Sg6Q8emB8ZSyx2"], ["first_name", "voluptas"], ["last_name", "voluptates"], ["username", "quia"], ["email", "test-015@gmail.com"], ["created_at", "2021-06-19 12:36:19.838697"], ["updated_at", "2021-06-19 12:36:19.838697"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "consequatur"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "consequatur"], ["short_description", "aut"], ["user_id", 7], ["created_at", "2021-06-19 12:36:19.840429"], ["updated_at", "2021-06-19 12:36:19.840429"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-016@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-016@gmail.com"], ["encrypted_password", "$2a$12$m.ViG/Jg7ZKyBkiwceor2O67MIN5WsRTL6WGRktuOSzjeQkos5.1u"], ["first_name", "ea"], ["last_name", "corrupti"], ["username", "qui"], ["email", "test-016@gmail.com"], ["created_at", "2021-06-19 12:36:20.031307"], ["updated_at", "2021-06-19 12:36:20.031307"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "velit"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "velit"], ["short_description", "omnis"], ["user_id", 8], ["created_at", "2021-06-19 12:36:20.032999"], ["updated_at", "2021-06-19 12:36:20.032999"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-017@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-017@gmail.com"], ["encrypted_password", "$2a$12$6J95MDaXutbshwUm4LJJp.KWq2xPwtsK.rAaq6Br7rRg4GZyagpR2"], ["first_name", "qui"], ["last_name", "velit"], ["username", "tempora"], ["email", "test-017@gmail.com"], ["created_at", "2021-06-19 12:36:20.220410"], ["updated_at", "2021-06-19 12:36:20.220410"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "quidem"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "quidem"], ["short_description", "voluptatum"], ["user_id", 9], ["created_at", "2021-06-19 12:36:20.221911"], ["updated_at", "2021-06-19 12:36:20.221911"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-018@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-018@gmail.com"], ["encrypted_password", "$2a$12$zCkOHGlt5LVg2HcA3HBa7.Qk0Us84qaGh0HQceWkoFT0b06iL14f2"], ["first_name", "blanditiis"], ["last_name", "est"], ["username", "rerum"], ["email", "test-018@gmail.com"], ["created_at", "2021-06-19 12:36:20.408810"], ["updated_at", "2021-06-19 12:36:20.408810"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "quo"], ["LIMIT", 1]]
+  [1m[36mTodo Create (0.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "quo"], ["short_description", "deleniti"], ["user_id", 10], ["created_at", "2021-06-19 12:36:20.410415"], ["updated_at", "2021-06-19 12:36:20.410415"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test-019@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test-019@gmail.com"], ["encrypted_password", "$2a$12$55GP9RIjThdS2aUCPCABdO3ygoT/P.C.DhaOjSLlRmgHPLA.tnZJK"], ["first_name", "accusamus"], ["last_name", "sit"], ["username", "id"], ["email", "test-019@gmail.com"], ["created_at", "2021-06-19 12:36:20.598640"], ["updated_at", "2021-06-19 12:36:20.598640"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m

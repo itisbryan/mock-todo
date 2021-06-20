@@ -1,14 +1,14 @@
 class TodosController < ApplicationController
-	before_action :authenticate_user!
-	before_action :set_todo, only: %i[show update destroy]
+  before_action :authenticate_user!
+  before_action :set_todo, only: %i[show update destroy]
 
-  # after_action :set_pagination_header(:todos), only: %i[index]
+ # after_action :set_pagination_header(:todos), only: %i[index]
 
-  #include Hyperender::Action
+ #include Hyperender::Action
 
   include Paginable
 
-  # GET /todos
+ # GET /todos
   def index
     @todos = current_user.todos.page(current_page).per(per_page)
     options = get_links_serializer_options('todos_path', @todos)
@@ -16,7 +16,7 @@ class TodosController < ApplicationController
     render json: TodoSerializer.new(@todos, options).serializable_hash.to_json
   end
 
-  # POST /todos
+ # POST /todos
   def create
     @todo = Todo.new(todo_params)
     @todo.user = current_user
@@ -27,7 +27,7 @@ class TodosController < ApplicationController
     render json: { errors: @todo.errors }, status: :unprocessable_entity
   end
 
-  # GET /todos/:id
+ # GET /todos/:id
   def show
     if @todo.user != current_user
       not_found_todo
@@ -36,7 +36,7 @@ class TodosController < ApplicationController
     render json: TodoSerializer.new(@todo, included_chain).serializable_hash.to_json, status: :ok
   end
 
-  # PUT /todos/:id
+ # PUT /todos/:id
   def update
     if @todo.user != current_user
       not_found_todo
@@ -49,7 +49,7 @@ class TodosController < ApplicationController
     render json: @todo.errors, status: :unprocessable_entity
   end
 
-  # DELETE /todos/:id
+ # DELETE /todos/:id
   def destroy
     if @todo.user != current_user
       not_found_todo
