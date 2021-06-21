@@ -35,9 +35,9 @@ class Task < ApplicationRecord
   validates_inclusion_of :status, in: STATES
   validate :not_past_date
 
-  scope :todo_tasks, -> { where(state: TODO) }
-  scope :processing_tasks, -> { where(state: IN_PROCESSING) }
-  scope :finished_tasks, -> { where(state: FINISHED) }
+  # scope :todo_tasks, -> { where(state: TODO) }
+  # scope :processing_tasks, -> { where(state: IN_PROCESSING) }
+  # scope :finished_tasks, -> { where(state: FINISHED) }
 
   belongs_to :user
   belongs_to :todo

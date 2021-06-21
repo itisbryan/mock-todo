@@ -2,6 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
   describe '#valid?' do
     it 'is valid when email is unique' do
       user1 = create(:user)
