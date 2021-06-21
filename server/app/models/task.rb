@@ -18,23 +18,33 @@
 #  user_id  (user_id => users.id)
 #
 class Task < ApplicationRecord
-  STATUS = [
-    TODO =  'todo'.freeze,
+  STATES = [
+    TODO = 'todo'.freeze,
     IN_PROCESSING = 'in processing'.freeze,
-    FINISHED = 'finished'.freeze,
+    FINISHED = 'finished'.freeze
   ].freeze
 
+  # enum state: {
+  #   todo => TODO,
+  #   processing => IN_PROCESSING,
+  #   finished => FINISHED
+  # }
 
-  validates :content, presence: true
-  validate :expiration_date_cannot_be_in_the_past
-  validates :status, inclusion: { in: STATUS }
+  validates_presence_of :status
+  validates_presence_of :content
+  validates_inclusion_of :status, in: STATES
+  validate :not_past_date
+
+  scope :todo_tasks, -> { where(state: TODO) }
+  scope :processing_tasks, -> { where(state: IN_PROCESSING) }
+  scope :finished_tasks, -> { where(state: FINISHED) }
 
   belongs_to :user
   belongs_to :todo
 
   private
-  
-  def expiration_date_cannot_be_in_the_past
+
+  def not_past_date
     errors.add(:expired_at, "Can't be in the past") if
       !expired_at.blank? && expired_at < Date.today
   end
