@@ -4,7 +4,8 @@ FactoryBot.define do
     username { SecureRandom.hex(4) }
     first_name { Faker::Lorem.word }
     last_name { Faker::Lorem.word }
-    sequence(:email) { |n| "test-#{n.to_s.rjust(3, '0')}@gmail.com" }
+    email { "#{SecureRandom.hex(4)}@gmail.com" }
+    # sequence(:email) { |n| "test-#{n.to_s.rjust(3, '0')}@gmail.com" }
     password { 'password' }
     is_public { true }
   end

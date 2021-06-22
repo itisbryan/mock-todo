@@ -1,30 +1,38 @@
 require 'rails_helper'
 require_relative '../support/devise'
+require_relative '../requests/authentication_spec'
 
-RSpec.describe 'Todos API', type: :controller do
+RSpec.describe 'Todos API', type: :request do
   # initialize test data
   let!(:todos) { create_list(:todo, 10) }
 
   let(:todo_id) { todos.first.id }
 
-  # let(@todos) { create_list(:todo, 10) }
+  before(:each) do
+    @current_user = FactoryBot.create(:user)
+  end
 
   # Test suite for GET /todos
   describe 'GET /todos' do
-    login_user
 
-    # make HTTP get request before each example
-    # before { get '/todos' }
-
+    # # make HTTP get request before each example
+    #
     it 'returns todos' do
       # Note `json` is a custom helper to parse JSON responses
-      # rubocop:enable expect(response).not_to be_empty
+      # rubocop:enable
+      login
+      get '/todos', headers: get_auth_params_from_login_response_headers(response)
+      expect(response).not_to be_empty
       expect(response.body.size).to eq(10)
     end
-
+    #
     it 'returns status code 200' do
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(:ok)
     end
+
+    # context 'when creating a todo' do
+    #   it 'can '
+    # end
   end
 
   # # Test suite for GET /todos/:id

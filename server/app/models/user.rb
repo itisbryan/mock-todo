@@ -54,8 +54,9 @@ class User < ActiveRecord::Base
   private
 
   def ensure_proper_name_case
-    self.first_name = first_name.capitalize
-    self.last_name = last_name.capitalize
+    self.first_name = :first_name.capitalize
+    # self.first_name = first_name.capitalize
+    self.last_name = :last_name.capitalize
   end
 
 end

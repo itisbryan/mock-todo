@@ -62,3 +62,5 @@ gem "hyperender", "~> 0.1.0"
 gem "draper", "~> 4.0"
 
 gem "simplecov", "~> 0.21.2"
+
+gem "capybara", "~> 3.35"
