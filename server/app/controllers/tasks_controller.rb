@@ -27,7 +27,7 @@ class TasksController < ApplicationController
     @task.user = current_user
     @task.todo = @todo
     if @task.save
-      render json: TaskSerializer.new(@task) .serializable_hash.to_json, status: :created
+      render json: TaskSerializer.new(@task).serializable_hash.to_json, status: :created
       return
     end
     render json: { error: @task.errors }, status: :unprocessable_entity

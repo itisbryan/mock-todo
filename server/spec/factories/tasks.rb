@@ -13,8 +13,8 @@ FactoryBot.define do
       end
     end
 
+    trait :invalid do
+      status { 'invalid sample' }
+    end
   end
-
-
-
 end

@@ -5771,3 +5771,854 @@ Processing by DeviseTokenAuth::RegistrationsController#create as */*
 Completed 200 OK in 402ms (Views: 6.5ms | ActiveRecord: 24.0ms | Allocations: 29738)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-06-22 16:47:38 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+Errno::EMFILE (Too many open files - Failed to initialize inotify: the user limit on the total number of inotify instances has been reached.):
+  
+rb-inotify (0.10.1) lib/rb-inotify/notifier.rb:69:in `initialize'
+listen (3.5.1) lib/listen/adapter/linux.rb:34:in `new'
+listen (3.5.1) lib/listen/adapter/linux.rb:34:in `_configure'
+listen (3.5.1) lib/listen/adapter/base.rb:47:in `block in configure'
+listen (3.5.1) lib/listen/adapter/base.rb:42:in `each'
+listen (3.5.1) lib/listen/adapter/base.rb:42:in `configure'
+listen (3.5.1) lib/listen/adapter/base.rb:66:in `start'
+/home/koiniin/.rbenv/versions/3.0.1/lib/ruby/3.0.0/forwardable.rb:238:in `start'
+listen (3.5.1) lib/listen/listener.rb:71:in `block in <class:Listener>'
+listen (3.5.1) lib/listen/fsm.rb:124:in `instance_eval'
+listen (3.5.1) lib/listen/fsm.rb:124:in `call'
+listen (3.5.1) lib/listen/fsm.rb:105:in `transition_with_callbacks!'
+listen (3.5.1) lib/listen/fsm.rb:72:in `transition'
+listen (3.5.1) lib/listen/listener.rb:92:in `start'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:109:in `start'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:88:in `initialize'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:44:in `new'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:44:in `initialize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:607:in `new'
+activerecord (6.1.3.2) lib/active_record/migration.rb:607:in `build_watcher'
+activerecord (6.1.3.2) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-06-22 16:47:58 +0700
+  
+Errno::EMFILE (Too many open files - Failed to initialize inotify: the user limit on the total number of inotify instances has been reached.):
+  
+rb-inotify (0.10.1) lib/rb-inotify/notifier.rb:69:in `initialize'
+listen (3.5.1) lib/listen/adapter/linux.rb:34:in `new'
+listen (3.5.1) lib/listen/adapter/linux.rb:34:in `_configure'
+listen (3.5.1) lib/listen/adapter/base.rb:47:in `block in configure'
+listen (3.5.1) lib/listen/adapter/base.rb:42:in `each'
+listen (3.5.1) lib/listen/adapter/base.rb:42:in `configure'
+listen (3.5.1) lib/listen/adapter/base.rb:66:in `start'
+/home/koiniin/.rbenv/versions/3.0.1/lib/ruby/3.0.0/forwardable.rb:238:in `start'
+listen (3.5.1) lib/listen/listener.rb:71:in `block in <class:Listener>'
+listen (3.5.1) lib/listen/fsm.rb:124:in `instance_eval'
+listen (3.5.1) lib/listen/fsm.rb:124:in `call'
+listen (3.5.1) lib/listen/fsm.rb:105:in `transition_with_callbacks!'
+listen (3.5.1) lib/listen/fsm.rb:72:in `transition'
+listen (3.5.1) lib/listen/listener.rb:92:in `start'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:109:in `start'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:88:in `initialize'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:44:in `new'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:44:in `initialize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:607:in `new'
+activerecord (6.1.3.2) lib/active_record/migration.rb:607:in `build_watcher'
+activerecord (6.1.3.2) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-06-22 16:48:24 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"nguyen@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"nguyen@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+DEPRECATION WARNING: connection_config is deprecated and will be removed from Rails 6.2 (Use connection_db_config instead) (called from public_send at /home/koiniin/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/activesupport-6.1.3.2/lib/active_support/core_ext/object/try.rb:15)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "nguyen@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "nguyen@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "koiniin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "last_name" = ?, "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "First_name"], ["last_name", "Last_name"], ["tokens", "{\"E70tnQ7nDmZjxnX7nac3hg\":{\"token\":\"$2a$10$y/OKmnew1qMqPwlXS9YpuOMofvFqddc4OOcWWgWDGesQljx1jnKzK\",\"expiry\":1625135384,\"last_token\":\"$2a$10$hegtAUbRB1DJNlwlIoGzJubTDYEhZwKi6deN./1noRPjyU3LA/do6\",\"updated_at\":\"2021-06-17T10:29:44Z\"},\"ux6Ssdpe7DQHJ0FD6G6Z0A\":{\"token\":\"$2a$10$kNxQb4n5YluYJOLVFxCxXe0R7tg5F81y1cwnH2V3BiNm1AleCguZG\",\"expiry\":1625138480,\"last_token\":\"$2a$10$hzkBW1HoJkqIxYqXcO8dmualB83lxrQIQrWPvL.Yhj7suQ1jPvBLG\",\"updated_at\":\"2021-06-17T11:21:19Z\"},\"W8C8y6y97iJ5rdSz_a4Bmg\":{\"token\":\"$2a$10$Sw/T840xxI.ddv36z8CUseC0VZG.CFyV7xiQmLjvQkCto6aVJKkKm\",\"expiry\":1625139644,\"last_token\":\"$2a$10$ISlXJzNWr3lP6JVmZqytHu7UIh5o1xaOz/jRIP.9qXfF158CDDZLm\",\"updated_at\":\"2021-06-17T11:40:44Z\"},\"JPHVKOxNso4xwTL4GFVcVw\":{\"token\":\"$2a$10$A6pgdFKV79ufazXO1/lWSeZFcR695H5/u.l3T/f01OUSMJdlWLn1K\",\"expiry\":1625153314,\"last_token\":\"$2a$10$7.2GIniHlmJzo1LB18wEFOI8GoN6KuaZnEuRWg9o.5e05yFrvx2Ym\",\"updated_at\":\"2021-06-17T15:28:34Z\"},\"eZmsLnxdb4IkxtCvYBe1gw\":{\"token\":\"$2a$10$CaOp7.A2rNb1fVXAjVBg6u7/7RpzDDWzd8jow.oOpVcvawwaaPlSG\",\"expiry\":1625153402,\"last_token\":\"$2a$10$vbfbQY23IV4f3.f2r.I0YubvmSyNddZIfBxmYjYt0TKt1rn5ZApjC\",\"updated_at\":\"2021-06-17T15:30:02Z\"},\"BotnWbLfdCl42JbMufUw6Q\":{\"token\":\"$2a$10$RONk5sAABaTCza84VPHNwuphXo3zdDvsM/eVs8rq0gzD/xSnycyJy\",\"expiry\":1625153430,\"last_token\":\"$2a$10$fVjwieQuHlbdmd/LqujqDeOnyS1539/elSH9cSha5j98pxwx6QGHW\",\"updated_at\":\"2021-06-17T15:30:30Z\"},\"S2lB1s-rCL72XXWnKGwuFQ\":{\"token\":\"$2a$10$cF.rLkXUdDl5Q74CjzKgAu5h3v4G/cnzmJGrlV7DVhh6dTzbf.0ea\",\"expiry\":1625153464,\"last_token\":\"$2a$10$ppoUJUKg0adpCjz44tPri.3.PyL4DojSh/LqWbmqUFLEMWR5mN4sG\",\"updated_at\":\"2021-06-17T15:31:04Z\"},\"XeMTuJfRXZlSxJ6X6RUPOA\":{\"token\":\"$2a$10$qHVKha40CpCjXvwXiktbruzofqOW9R0pKLAKuhuvPNaIye3HOlY9W\",\"expiry\":1625154659,\"last_token\":\"$2a$10$YXZ.TyK4t2.kUyMDn7XB3e9jL.2EX55tmfAPyV320v16SGEkyCSQi\",\"updated_at\":\"2021-06-17T15:50:59Z\"},\"WEwh_X2lN6Kqix3Oed1G_g\":{\"token\":\"$2a$10$lVeJgfF.9HWp2K2F8a2cAuqOmAewutL.dAoMTp3zJQyc2oYvGMM/a\",\"expiry\":1625215761},\"ugnfapr4OOqwBZTIr0Kdig\":{\"token\":\"$2a$10$lwjmAEQu.p2.Rk.hMxzg7OUdYMNxWDOq3lr7hbPxoM6f52kjFIkPm\",\"expiry\":1625564905}}"], ["updated_at", "2021-06-22 09:48:25.060450"], ["id", 1]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 372ms (Views: 2.8ms | ActiveRecord: 19.8ms | Allocations: 24446)
+
+
+Started GET "/todos" for 127.0.0.1 at 2021-06-22 16:50:10 +0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/concerns/paginable.rb:16:in `get_links_serializer_options'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 1], ["OFFSET", 0]]
+  ↳ app/controllers/todos_controller.rb:16:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:16:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 26813)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-06-23 21:59:28 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"nguyen@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"nguyen@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+DEPRECATION WARNING: connection_config is deprecated and will be removed from Rails 6.2 (Use connection_db_config instead) (called from public_send at /home/koiniin/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/activesupport-6.1.3.2/lib/active_support/core_ext/object/try.rb:15)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "nguyen@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "nguyen@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "koiniin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"ux6Ssdpe7DQHJ0FD6G6Z0A\":{\"token\":\"$2a$10$kNxQb4n5YluYJOLVFxCxXe0R7tg5F81y1cwnH2V3BiNm1AleCguZG\",\"expiry\":1625138480,\"last_token\":\"$2a$10$hzkBW1HoJkqIxYqXcO8dmualB83lxrQIQrWPvL.Yhj7suQ1jPvBLG\",\"updated_at\":\"2021-06-17T11:21:19Z\"},\"W8C8y6y97iJ5rdSz_a4Bmg\":{\"token\":\"$2a$10$Sw/T840xxI.ddv36z8CUseC0VZG.CFyV7xiQmLjvQkCto6aVJKkKm\",\"expiry\":1625139644,\"last_token\":\"$2a$10$ISlXJzNWr3lP6JVmZqytHu7UIh5o1xaOz/jRIP.9qXfF158CDDZLm\",\"updated_at\":\"2021-06-17T11:40:44Z\"},\"JPHVKOxNso4xwTL4GFVcVw\":{\"token\":\"$2a$10$A6pgdFKV79ufazXO1/lWSeZFcR695H5/u.l3T/f01OUSMJdlWLn1K\",\"expiry\":1625153314,\"last_token\":\"$2a$10$7.2GIniHlmJzo1LB18wEFOI8GoN6KuaZnEuRWg9o.5e05yFrvx2Ym\",\"updated_at\":\"2021-06-17T15:28:34Z\"},\"eZmsLnxdb4IkxtCvYBe1gw\":{\"token\":\"$2a$10$CaOp7.A2rNb1fVXAjVBg6u7/7RpzDDWzd8jow.oOpVcvawwaaPlSG\",\"expiry\":1625153402,\"last_token\":\"$2a$10$vbfbQY23IV4f3.f2r.I0YubvmSyNddZIfBxmYjYt0TKt1rn5ZApjC\",\"updated_at\":\"2021-06-17T15:30:02Z\"},\"BotnWbLfdCl42JbMufUw6Q\":{\"token\":\"$2a$10$RONk5sAABaTCza84VPHNwuphXo3zdDvsM/eVs8rq0gzD/xSnycyJy\",\"expiry\":1625153430,\"last_token\":\"$2a$10$fVjwieQuHlbdmd/LqujqDeOnyS1539/elSH9cSha5j98pxwx6QGHW\",\"updated_at\":\"2021-06-17T15:30:30Z\"},\"S2lB1s-rCL72XXWnKGwuFQ\":{\"token\":\"$2a$10$cF.rLkXUdDl5Q74CjzKgAu5h3v4G/cnzmJGrlV7DVhh6dTzbf.0ea\",\"expiry\":1625153464,\"last_token\":\"$2a$10$ppoUJUKg0adpCjz44tPri.3.PyL4DojSh/LqWbmqUFLEMWR5mN4sG\",\"updated_at\":\"2021-06-17T15:31:04Z\"},\"XeMTuJfRXZlSxJ6X6RUPOA\":{\"token\":\"$2a$10$qHVKha40CpCjXvwXiktbruzofqOW9R0pKLAKuhuvPNaIye3HOlY9W\",\"expiry\":1625154659,\"last_token\":\"$2a$10$YXZ.TyK4t2.kUyMDn7XB3e9jL.2EX55tmfAPyV320v16SGEkyCSQi\",\"updated_at\":\"2021-06-17T15:50:59Z\"},\"WEwh_X2lN6Kqix3Oed1G_g\":{\"token\":\"$2a$10$lVeJgfF.9HWp2K2F8a2cAuqOmAewutL.dAoMTp3zJQyc2oYvGMM/a\",\"expiry\":1625215761},\"ugnfapr4OOqwBZTIr0Kdig\":{\"token\":\"$2a$10$lwjmAEQu.p2.Rk.hMxzg7OUdYMNxWDOq3lr7hbPxoM6f52kjFIkPm\",\"expiry\":1625564905},\"aUn8xuCopAJtiL6ht5hTRQ\":{\"token\":\"$2a$10$TmOQ9phieydiT7ZnfP8uhOgz7NaGZW/vvpPe0hqCVA7bjPxeKsjvq\",\"expiry\":1625669968}}"], ["updated_at", "2021-06-23 14:59:29.003594"], ["id", 1]]
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 365ms (Views: 3.5ms | ActiveRecord: 21.1ms | Allocations: 24475)
+
+
+Started POST "/todos" for 127.0.0.1 at 2021-06-23 22:00:30 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Testing", "short_description"=>"Testing too", "todo"=>{"title"=>"Testing", "short_description"=>"Testing too"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:23:in `create'
+  [1m[36mTodo Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "Testing"], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:23:in `create'
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "short_description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Testing"], ["short_description", "Testing too"], ["user_id", 1], ["created_at", "2021-06-23 15:00:30.715675"], ["updated_at", "2021-06-23 15:00:30.715675"]]
+  ↳ app/controllers/todos_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:23:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 6]]
+  ↳ app/controllers/todos_controller.rb:24:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 201 Created in 90ms (Views: 0.4ms | ActiveRecord: 11.7ms | Allocations: 16409)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 10:42:07 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:36:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 0.5ms | ActiveRecord: 3.8ms | Allocations: 26103)
+
+
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 10:42:28 +0700
+Processing by TodosController#update as */*
+  Parameters: {"title"=>"Mock Project 2", "id"=>"1", "todo"=>{"title"=>"Mock Project 2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? AND "todos"."id" != ? LIMIT ?[0m  [["title", "Mock Project 2"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Update (1.2ms)[0m  [1m[33mUPDATE "todos" SET "title" = ?, "updated_at" = ? WHERE "todos"."id" = ?[0m  [["title", "Mock Project 2"], ["updated_at", "2021-06-24 03:42:28.392578"], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 204 No Content in 24ms (ActiveRecord: 11.3ms | Allocations: 7966)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 10:42:39 +0700
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:36:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 3691)
+
+
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 10:44:13 +0700
+  
+SyntaxError (/home/koiniin/Desktop/Ruby/ruby_3/todos-app/server/app/controllers/todos_controller.rb:47: syntax error, unexpected ':', expecting `end'
+      return json: @todos.message
+                 ^
+):
+  
+app/controllers/todos_controller.rb:47: syntax error, unexpected ':', expecting `end'
+app/controllers/todos_controller.rb:47: syntax error, unexpected ':', expecting `end'
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 10:45:11 +0700
+  
+SyntaxError (/home/koiniin/Desktop/Ruby/ruby_3/todos-app/server/app/controllers/todos_controller.rb:84: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/todos_controller.rb:84: syntax error, unexpected `end', expecting end-of-input
+app/controllers/todos_controller.rb:84: syntax error, unexpected `end', expecting end-of-input
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 10:45:35 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TodosController#update as */*
+  Parameters: {"title"=>"Mock Project 3", "id"=>"1", "todo"=>{"title"=>"Mock Project 3"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? AND "todos"."id" != ? LIMIT ?[0m  [["title", "Mock Project 3"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Update (0.3ms)[0m  [1m[33mUPDATE "todos" SET "title" = ?, "updated_at" = ? WHERE "todos"."id" = ?[0m  [["title", "Mock Project 3"], ["updated_at", "2021-06-24 03:45:36.006730"], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:47:in `update'
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 14.1ms | Allocations: 23331)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/todos_controller.rb:47:in `update'
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 10:46:34 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TodosController#update as */*
+  Parameters: {"title"=>"Mock Project 3", "id"=>"1", "todo"=>{"title"=>"Mock Project 3"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:82:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? AND "todos"."id" != ? LIMIT ?[0m  [["title", "Mock Project 3"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:36:in `show'
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 3.2ms | Allocations: 20485)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/todos_controller.rb:36:in `show'
+app/controllers/todos_controller.rb:47:in `update'
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 10:46:53 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TodosController#update as */*
+  Parameters: {"title"=>"Mock Project 3", "id"=>"1", "todo"=>{"title"=>"Mock Project 3"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:82:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? AND "todos"."id" != ? LIMIT ?[0m  [["title", "Mock Project 3"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+Redirected to 
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 2.7ms | Allocations: 17516)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/todos_controller.rb:47:in `update'
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 10:53:01 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TodosController#update as */*
+  Parameters: {"title"=>"Mock Project 3", "id"=>"1", "todo"=>{"title"=>"Mock Project 3"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? AND "todos"."id" != ? LIMIT ?[0m  [["title", "Mock Project 3"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 204 No Content in 93ms (ActiveRecord: 1.1ms | Allocations: 17196)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 10:59:33 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#show as */*
+  Parameters: {"title"=>"Mock Project 3", "id"=>"1", "todo"=>{"title"=>"Mock Project 3"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:36:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 0.5ms | ActiveRecord: 2.4ms | Allocations: 23777)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 11:10:25 +0700
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1", "todo"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:36:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 4630)
+
+
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 11:10:31 +0700
+Processing by TodosController#update as */*
+  Parameters: {"id"=>"1", "todo"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.4ms | Allocations: 2004)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: todo
+Did you mean?  todo
+               action
+               id
+               controller):
+  
+app/controllers/todos_controller.rb:77:in `todo_params'
+app/controllers/todos_controller.rb:45:in `update'
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 11:10:39 +0700
+Processing by TodosController#update as */*
+  Parameters: {"title"=>2, "id"=>"1", "todo"=>{"title"=>2}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? AND "todos"."id" != ? LIMIT ?[0m  [["title", "2"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Update (0.4ms)[0m  [1m[33mUPDATE "todos" SET "title" = ?, "updated_at" = ? WHERE "todos"."id" = ?[0m  [["title", "2"], ["updated_at", "2021-06-24 04:10:39.413990"], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 204 No Content in 31ms (ActiveRecord: 11.8ms | Allocations: 8459)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 11:10:48 +0700
+Error occurred while parsing request parameters.
+Contents:
+
+// {
+//     "title": 2
+// }
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at ''):
+  
+actionpack (6.1.3.2) lib/action_dispatch/http/parameters.rb:96:in `rescue in parse_formatted_parameters'
+actionpack (6.1.3.2) lib/action_dispatch/http/parameters.rb:92:in `parse_formatted_parameters'
+actionpack (6.1.3.2) lib/action_dispatch/http/request.rb:399:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.1.3.2) lib/action_dispatch/http/request.rb:398:in `POST'
+actionpack (6.1.3.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.1.3.2) lib/action_controller/metal/params_wrapper.rb:284:in `_wrapper_enabled?'
+actionpack (6.1.3.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (6.1.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+// {
+//     "title": 2
+// }
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 11:10:54 +0700
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:36:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 3683)
+
+
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 11:12:21 +0700
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "title": 0x3Af
+}
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at '{
+    "title": 0x3Af
+}'):
+  
+actionpack (6.1.3.2) lib/action_dispatch/http/parameters.rb:96:in `rescue in parse_formatted_parameters'
+actionpack (6.1.3.2) lib/action_dispatch/http/parameters.rb:92:in `parse_formatted_parameters'
+actionpack (6.1.3.2) lib/action_dispatch/http/request.rb:399:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.1.3.2) lib/action_dispatch/http/request.rb:398:in `POST'
+actionpack (6.1.3.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.1.3.2) lib/action_controller/metal/params_wrapper.rb:284:in `_wrapper_enabled?'
+actionpack (6.1.3.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (6.1.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "title": 0x3Af
+}
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 11:12:34 +0700
+Processing by TodosController#update as */*
+  Parameters: {"title"=>true, "id"=>"1", "todo"=>{"title"=>true}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? AND "todos"."id" != ? LIMIT ?[0m  [["title", "t"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Update (0.2ms)[0m  [1m[33mUPDATE "todos" SET "title" = ?, "updated_at" = ? WHERE "todos"."id" = ?[0m  [["title", "t"], ["updated_at", "2021-06-24 04:12:34.257092"], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 204 No Content in 20ms (ActiveRecord: 10.9ms | Allocations: 7582)
+
+
+Started PUT "/todos/1" for 127.0.0.1 at 2021-06-24 11:13:14 +0700
+Processing by TodosController#update as */*
+  Parameters: {"title"=>"", "id"=>"1", "todo"=>{"title"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTodo Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? AND "todos"."id" != ? LIMIT ?[0m  [["title", ""], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/todos_controller.rb:45:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (7.83ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 27ms (Views: 16.2ms | ActiveRecord: 1.0ms | Allocations: 13548)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 14:55:41 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#show as */*
+  Parameters: {"title"=>"", "id"=>"1", "todo"=>{"title"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:36:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 1.2ms | ActiveRecord: 5.2ms | Allocations: 23767)
+
+
+Started DELETE "/todos/1" for 127.0.0.1 at 2021-06-24 14:55:49 +0700
+Processing by TodosController#destroy as */*
+  Parameters: {"title"=>"", "id"=>"1", "todo"=>{"title"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:58:in `destroy'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 1]]
+  ↳ app/controllers/todos_controller.rb:58:in `destroy'
+  [1m[36mTodo Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/todos_controller.rb:58:in `destroy'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:58:in `destroy'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 204 No Content in 26ms (ActiveRecord: 10.6ms | Allocations: 7674)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 14:55:58 +0700
+Processing by TodosController#show as */*
+  Parameters: {"title"=>"", "id"=>"1", "todo"=>{"title"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 404 Not Found in 6ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1859)
+
+
+Started GET "/todos/1/tasks/1" for 127.0.0.1 at 2021-06-24 15:47:40 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#show as */*
+  Parameters: {"todo_id"=>"1", "id"=>"1"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 7688)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-06-24 15:47:50 +0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"nguyen@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"nguyen@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+DEPRECATION WARNING: connection_config is deprecated and will be removed from Rails 6.2 (Use connection_db_config instead) (called from public_send at /home/koiniin/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/activesupport-6.1.3.2/lib/active_support/core_ext/object/try.rb:15)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "nguyen@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "nguyen@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "koiniin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"W8C8y6y97iJ5rdSz_a4Bmg\":{\"token\":\"$2a$10$Sw/T840xxI.ddv36z8CUseC0VZG.CFyV7xiQmLjvQkCto6aVJKkKm\",\"expiry\":1625139644,\"last_token\":\"$2a$10$ISlXJzNWr3lP6JVmZqytHu7UIh5o1xaOz/jRIP.9qXfF158CDDZLm\",\"updated_at\":\"2021-06-17T11:40:44Z\"},\"JPHVKOxNso4xwTL4GFVcVw\":{\"token\":\"$2a$10$A6pgdFKV79ufazXO1/lWSeZFcR695H5/u.l3T/f01OUSMJdlWLn1K\",\"expiry\":1625153314,\"last_token\":\"$2a$10$7.2GIniHlmJzo1LB18wEFOI8GoN6KuaZnEuRWg9o.5e05yFrvx2Ym\",\"updated_at\":\"2021-06-17T15:28:34Z\"},\"eZmsLnxdb4IkxtCvYBe1gw\":{\"token\":\"$2a$10$CaOp7.A2rNb1fVXAjVBg6u7/7RpzDDWzd8jow.oOpVcvawwaaPlSG\",\"expiry\":1625153402,\"last_token\":\"$2a$10$vbfbQY23IV4f3.f2r.I0YubvmSyNddZIfBxmYjYt0TKt1rn5ZApjC\",\"updated_at\":\"2021-06-17T15:30:02Z\"},\"BotnWbLfdCl42JbMufUw6Q\":{\"token\":\"$2a$10$RONk5sAABaTCza84VPHNwuphXo3zdDvsM/eVs8rq0gzD/xSnycyJy\",\"expiry\":1625153430,\"last_token\":\"$2a$10$fVjwieQuHlbdmd/LqujqDeOnyS1539/elSH9cSha5j98pxwx6QGHW\",\"updated_at\":\"2021-06-17T15:30:30Z\"},\"S2lB1s-rCL72XXWnKGwuFQ\":{\"token\":\"$2a$10$cF.rLkXUdDl5Q74CjzKgAu5h3v4G/cnzmJGrlV7DVhh6dTzbf.0ea\",\"expiry\":1625153464,\"last_token\":\"$2a$10$ppoUJUKg0adpCjz44tPri.3.PyL4DojSh/LqWbmqUFLEMWR5mN4sG\",\"updated_at\":\"2021-06-17T15:31:04Z\"},\"XeMTuJfRXZlSxJ6X6RUPOA\":{\"token\":\"$2a$10$qHVKha40CpCjXvwXiktbruzofqOW9R0pKLAKuhuvPNaIye3HOlY9W\",\"expiry\":1625154659,\"last_token\":\"$2a$10$YXZ.TyK4t2.kUyMDn7XB3e9jL.2EX55tmfAPyV320v16SGEkyCSQi\",\"updated_at\":\"2021-06-17T15:50:59Z\"},\"WEwh_X2lN6Kqix3Oed1G_g\":{\"token\":\"$2a$10$lVeJgfF.9HWp2K2F8a2cAuqOmAewutL.dAoMTp3zJQyc2oYvGMM/a\",\"expiry\":1625215761},\"ugnfapr4OOqwBZTIr0Kdig\":{\"token\":\"$2a$10$lwjmAEQu.p2.Rk.hMxzg7OUdYMNxWDOq3lr7hbPxoM6f52kjFIkPm\",\"expiry\":1625564905},\"aUn8xuCopAJtiL6ht5hTRQ\":{\"token\":\"$2a$10$TmOQ9phieydiT7ZnfP8uhOgz7NaGZW/vvpPe0hqCVA7bjPxeKsjvq\",\"expiry\":1625669968},\"ZKFzuGgwHDjzjIFCYBqMUg\":{\"token\":\"$2a$10$ILenTa/FPj.xe9cvFizguuwNTw.cS9gnZMofN6kfVundOZVgwC1Om\",\"expiry\":1625734071}}"], ["updated_at", "2021-06-24 08:47:51.130351"], ["id", 1]]
+  [1m[36mTRANSACTION (72.5ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 373ms (Views: 2.1ms | ActiveRecord: 74.1ms | Allocations: 23715)
+
+
+Started GET "/todos/2" for 127.0.0.1 at 2021-06-24 15:48:46 +0700
+Processing by TodosController#show as */*
+  Parameters: {"title"=>"", "id"=>"2", "todo"=>{"title"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 71ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 8497)
+
+
+Started GET "/todos/4" for 127.0.0.1 at 2021-06-24 15:48:50 +0700
+Processing by TodosController#show as */*
+  Parameters: {"title"=>"", "id"=>"4", "todo"=>{"title"=>""}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 3008)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2021-06-24 15:48:53 +0700
+Processing by TodosController#show as */*
+  Parameters: {"title"=>"", "id"=>"1", "todo"=>{"title"=>""}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 404 Not Found in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1459)
+
+
+Started POST "/todos" for 127.0.0.1 at 2021-06-24 15:49:07 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Test", "todo"=>{"title"=>"Test"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:23:in `create'
+  [1m[36mTodo Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "todos" WHERE "todos"."title" = ? LIMIT ?[0m  [["title", "Test"], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:23:in `create'
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Test"], ["user_id", 1], ["created_at", "2021-06-24 08:49:07.157481"], ["updated_at", "2021-06-24 08:49:07.157481"]]
+  ↳ app/controllers/todos_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:23:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 7]]
+  ↳ app/controllers/todos_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 201 Created in 67ms (Views: 0.5ms | ActiveRecord: 11.9ms | Allocations: 11284)
+
+
+Started GET "/todos/7" for 127.0.0.1 at 2021-06-24 15:49:18 +0700
+Processing by TodosController#show as */*
+  Parameters: {"title"=>"Test", "id"=>"7", "todo"=>{"title"=>"Test"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:81:in `set_todo'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `show'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "tasks"."id" FROM "tasks" WHERE "tasks"."todo_id" = ?[0m  [["todo_id", 7]]
+  ↳ app/controllers/todos_controller.rb:36:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 3781)
+
+
+Started GET "/todos/7/tasks" for 127.0.0.1 at 2021-06-24 15:49:23 +0700
+Processing by TasksController#index as */*
+  Parameters: {"title"=>"Test", "todo_id"=>"7", "task"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:73:in `set_todo'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."todo_id" = ?[0m  [["user_id", 1], ["todo_id", 7]]
+  ↳ app/controllers/concerns/paginable.rb:16:in `get_links_serializer_options'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."todo_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 1], ["todo_id", 7], ["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/tasks_controller.rb:12:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 6578)
+
+
+Started POST "/todos/7/tasks" for 127.0.0.1 at 2021-06-24 15:50:13 +0700
+Processing by TasksController#create as */*
+  Parameters: {"content"=>"House task", "status"=>"todo", "todo_id"=>"7", "task"=>{"content"=>"House task", "status"=>"todo"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:73:in `set_todo'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `create'
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("content", "todo_id", "user_id", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "House task"], ["todo_id", 7], ["user_id", 1], ["status", "todo"], ["created_at", "2021-06-24 08:50:13.763536"], ["updated_at", "2021-06-24 08:50:13.763536"]]
+  ↳ app/controllers/tasks_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 201 Created in 37ms (Views: 1.0ms | ActiveRecord: 10.9ms | Allocations: 10460)
+
+
+Started GET "/todos/7/tasks" for 127.0.0.1 at 2021-06-24 15:50:24 +0700
+Processing by TasksController#index as */*
+  Parameters: {"todo_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:73:in `set_todo'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."todo_id" = ?[0m  [["user_id", 1], ["todo_id", 7]]
+  ↳ app/controllers/concerns/paginable.rb:16:in `get_links_serializer_options'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."todo_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 1], ["todo_id", 7], ["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/tasks_controller.rb:12:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 4100)
+
+
+Started POST "/todos/7/tasks" for 127.0.0.1 at 2021-06-24 15:51:02 +0700
+Processing by TasksController#create as */*
+  Parameters: {"content"=>"TEst 2", "status"=>"in processing", "todo_id"=>"7", "task"=>{"content"=>"TEst 2", "status"=>"in processing"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:73:in `set_todo'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `create'
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("content", "todo_id", "user_id", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "TEst 2"], ["todo_id", 7], ["user_id", 1], ["status", "in processing"], ["created_at", "2021-06-24 08:51:02.863057"], ["updated_at", "2021-06-24 08:51:02.863057"]]
+  ↳ app/controllers/tasks_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 201 Created in 21ms (Views: 0.2ms | ActiveRecord: 11.0ms | Allocations: 6544)
+
+
+Started GET "/todos/7/tasks" for 127.0.0.1 at 2021-06-24 15:51:12 +0700
+Processing by TasksController#index as */*
+  Parameters: {"todo_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "nguyen@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:73:in `set_todo'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."todo_id" = ?[0m  [["user_id", 1], ["todo_id", 7]]
+  ↳ app/controllers/concerns/paginable.rb:16:in `get_links_serializer_options'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."todo_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 1], ["todo_id", 7], ["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/tasks_controller.rb:12:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4282)
+
+

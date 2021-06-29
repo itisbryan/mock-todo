@@ -31,7 +31,7 @@ class ApplicationController < ActionController::API
 
     pagination_links = []
     page.each do |k, v|
-      new_request_hash= request_params.merge({ :page => v })
+      new_request_hash= request_params.merge({ page: v })
       pagination_links << "<#{url_without_params}?#{new_request_hash.to_param}>; rel=\"#{k}\""
     end
     headers['Link'] = pagination_links.join(', ')

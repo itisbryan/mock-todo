@@ -27,8 +27,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -38,29 +38,37 @@ group :development do
 end
 
 group :test do
-  gem 'factory_bot_rails'
-  gem 'shoulda-matchers'
-  gem 'faker'
+  gem 'capybara', '~> 3.35'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'shoulda-matchers'
+  gem 'simplecov', '~> 0.21.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "devise_token_auth", "~> 1.1"
-gem "hirb", "~> 0.7.3"
-gem "rack-cors", "~> 1.1"
-gem "annotate", "~> 3.1"
+gem 'annotate', '~> 3.1'
+gem 'devise_token_auth', '~> 1.1'
+gem 'hirb', '~> 0.7.3'
+gem 'rack-cors', '~> 1.1'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem "kaminari", "~> 1.2"
+gem 'kaminari', '~> 1.2'
 
-gem "active_model_serializers", "~> 0.10.12"
+gem 'active_model_serializers', '~> 0.10.12'
 
-gem "fast_jsonapi", "~> 1.5"
+gem 'fast_jsonapi', '~> 1.5'
 
-gem "hyperender", "~> 0.1.0"
+gem 'hyperender', '~> 0.1.0'
 
-gem "draper", "~> 4.0"
+gem 'draper', '~> 4.0'
+gem 'pry'
+gem 'pry-byebug'
+gem 'pry-doc'
+gem 'pry-power_assert'
+gem 'pry-rails'
+gem 'pry-remote'
+gem 'pry-stack_explorer'
 
-gem "simplecov", "~> 0.21.2"
 
-gem "capybara", "~> 3.35"
+gem 'rubocop', '~> 1.17'

@@ -40,8 +40,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-  validates_uniqueness_of :email
-  validates_uniqueness_of :username
+  validates_uniqueness_of :email, :username
+  # validates_uniqueness_of :username
   validates_presence_of :first_name
   validates_presence_of :username
   validates_format_of :email, with: URI::MailTo::EMAIL_REGEXP, message: 'must be a valid email address'
@@ -54,9 +54,9 @@ class User < ActiveRecord::Base
   private
 
   def ensure_proper_name_case
-    self.first_name = :first_name.capitalize
+    self.first_name = first_name.capitalize
     # self.first_name = first_name.capitalize
-    self.last_name = :last_name.capitalize
+    self.last_name = last_name.capitalize
   end
 
 end

@@ -4,5 +4,9 @@ FactoryBot.define do
     title { SecureRandom.hex(10) }
     user { create(:user) }
     short_description { Faker::Lorem.word }
+
+    trait :invalid do
+      title { nil }
+    end
   end
 end
