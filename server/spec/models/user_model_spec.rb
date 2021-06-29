@@ -2,13 +2,15 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
+  let(:user) { create(:user, email: email) }
+  let(:users) { create_list(:user, 2) }
+  let(:email) { 'adf@abc.com' }
   describe '#valid?' do
     it 'is valid when email is unique' do
-      user1 = create(:user)
-      user2 = create(:user)
 
-      expect(user2.email).not_to be user1.email
-      expect(user2).to be_valid
+      expect(users.second.email).not_to be user.first.email
+      expect(users.second).to be_valid
     end
 
     it 'is invalid if email is taken' do

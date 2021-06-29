@@ -15,7 +15,8 @@
 #  user_id  (user_id => users.id)
 #
 class Todo < ApplicationRecord
-  validates :title, presence: true #, uniqueness: true
+  validates_presence_of :title
+  validates_uniqueness_of :title
   belongs_to :user
   has_many :tasks, dependent: :destroy
 end
